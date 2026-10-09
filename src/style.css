@@ -300,17 +300,6 @@ h1 {
   margin-top: 1.15rem;
 }
 
-.alt-contact {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.alt-contact a {
-  color: var(--silver);
-  font-weight: 600;
-}
-
 .trust {
   display: flex;
   flex-wrap: wrap;
@@ -866,8 +855,58 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.contact-panel .cta-row {
-  margin-top: 1.4rem;
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: 1.4rem;
+  border-radius: 20px;
+  border: 1px solid rgba(150, 198, 255, 0.18);
+  background: rgba(6, 16, 34, 0.6);
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-family: Syne, sans-serif;
+  font-size: 1.4rem;
+}
+
+.contact-panel .contact-role {
+  margin: 0;
+  color: var(--silver);
+  font-size: 0.95rem;
+}
+
+.contact-card .phone {
+  margin: 0.4rem 0 0;
+}
+
+.contact-email {
+  color: var(--muted);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-email:hover {
+  color: white;
+}
+
+.contact-card .btn {
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .contacts {
+    grid-template-columns: 1fr;
+  }
 }
 
 .phone {
@@ -916,9 +955,14 @@ h1 {
 }
 
 .footer-links a:hover,
-.phone a:hover,
-.alt-contact a:hover {
+.phone a:hover {
   color: white;
+}
+
+.footer-name {
+  margin-top: 0.4rem;
+  color: var(--silver);
+  font-size: 0.9rem;
 }
 
 .footer-title {
